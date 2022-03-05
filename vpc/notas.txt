@@ -1,0 +1,86 @@
+VPC
+
+
+- VPC: Introduccion, prerequisitos: ip y mascara, subnetting, CIDR Blocks, routing
+- VPC: Modelo de subnets publicas y privadas
+- VPC: Crear una VPC y sus subnets y  rutas 
+- VPC: Salida a internet: Nat instances Vs Nat gateways Vs Internet Gateways.
+- VPC: Security groups avanzado (source)
+- VPC: Nacls
+- VPC: Diferencia entre SG y NACLS
+- VPC: VPC Peering
+- VPC: VPC endpoints y endpoint services
+- VPC: ENIs y EIPS
+- VPC: DHCP option sets
+- VPC: Reachability Analyzer y Network access analyzer 
+- VPC: AWS Network Firewall
+- VPC: AWS Cloud WAN
+- VPC: Traffic mirroring
+- VPC: IPV6
+
+
+
+
+
+Nota: igual esto habria que meterlo en la seccion de R53
+- VPC: Route 53 Resolver DNS Firewall y Domain lists 
+
+## VPC: Introduccion, prerequisitos: ip y mascara, subnetting, CIDR Blocks, routing
+
+Conceptos para video de introduccion.
+
+Vamos a hablar hoy de las VPCS. Para ello, primero hay unos conceptos basicos de redes que debeis conocer. Estos conceptos cubren cosas como IP, mascaras de red, 
+subnetting, enrutado, cidr, etc. Dichos conceptos no los voy a cubrir en detalle pero vamos a nombrarlos y definirlos antes de nada.
+
+A continuacion hablaremos de los conceptos propios de AWS VPC y en videos posteriores empezaremos a trabajar de forma practica con dichos conceptos.
+
+Por tanto, empecemos diciendo que una VPC no es mas que una red privada virtual que podemos desplegar en nuestra cuenta de aws en una region para alojar en ella recursos como instancias ec2, rds, etc.
+
+esta red funcionara igual que una red logica en un centro de datos. tiene su espacio de ips, sus rutas, sus dispositivos de enrutado o routers, etc. pero todo es virtual.
+
+Prerequisitos: cosas que debeis conocer
+
+IP: Una ip es el identificador unico de un host en una red. Por tanto, cada host, es decir, instancia ec2 u otros recursos, tendran una ip alojada en una vpc.
+subnetting: A la hora de configurar nuestras vpcs deberemos tener unos conceptos basicos de subnetting, es decir, saber divirid una red en redes mas pequenyas para  poder alojar hosts en esas subredes.
+enrutado: dado que una red puede tener muchas subredes, los hosts necesitan conocer la ruta para llegar a hosts de otra red, sea dentro de la misma vpc o fuera, es decir, internet. tenemos que saber que hay que definir rutas para cada subred.
+notacion cidr: la notacion cidr nos permite definir la ip y mascara de subred con una notacion sencilla. un ejemplo seria 192.168.1.0/16 por ejemplo.
+Diferencia entre una subred privada y publica: es decir, si las subredes estan aisladas de internet o si tiene acceso a internet. Esto cubre conceptos como acceso de entrada y/o salida, etc. Antiguamente era comun hablar de redes tipo publicas, privadas o DMZ. hoy esos conceptos no se usan tanto en el mundo cloud y hablaremos de redes publicas, privadas o aisladas.
+
+
+
+Estos son conceptos en los que no puedo detenerme porque damos por echo que cualquier profesional de la informatica ya deberia conocer.
+
+
+Conceptos
+
+VPC, Virtual private network: una red virtual dedicada en nuestra cuenta de aws. Cada vpc es independiente de las demas vpcs.
+
+Subred: una subred logica dentro de VPC.
+
+Bloque de CIDR: Define el ambito de la subred, direccionamiento y enrutado.
+
+Tabla de enrutamiento: un conjunto  rutas, que se utilizan para determinar dónde se dirige el tráfico de red.
+
+DHCP option set: información de configuración que obtienen los hosts de una red via dhcp. incluye cosas como ip, servidor dns, nombre de dominio, etc.
+
+Internet Gateway: una gateway que se asocia a la VPC para habilitar la comunicación entre los hosts alojados en la red y internet.
+
+Egress only internet gateway: un tipo de gateway  de Internet que permite a una instancia de EC2 en una subred acceder a Internet solo en direccion de salida. 
+
+vpc endpoint:  permite conectar los hosts de una subred privada (es decir, sin acceso de salida a internet) con ciertos servicios de aws habilitados mediante el servicio PrivateLink. 
+
+Nat gatway: un servicio administrado por AWS que permite que las instancias de EC2 en las subredes privadas se conecten a Internet.
+
+Instancia NAT: una instancia de EC2 en una subred pública que permite que las instancias en las subredes privadas se conecten a Internet.
+
+Security groups: Los security groups funcionan como un firewall virtual para controlar el tráfico entrante y saliente de un recurso de AWS, como una instancia de EC2. Es Statefull
+
+NACL: una capa de seguridad opcional para la VPC que actúa como firewall a fin de controlar el tráfico dentro y fuera de las subredes. es Stateless
+
+Diferencia entre Statefull y stateless: 
+
+Pregunta de examen: Diferencia entre Security group y Nacl.
+
+
+
+## - VPC: Modelo de subnets publicas y privadas

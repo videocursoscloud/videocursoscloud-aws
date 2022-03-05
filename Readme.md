@@ -10,10 +10,27 @@ Este repositorio incluye codigo de apoyo para las lecciones de aws del canal de 
 - [Curso Gratis de AWS 2021!!! - 04 - EC2 Parte 1 - Tipos de Instancia](https://www.youtube.com/watch?v=xQsaJ5QWC-g)
 - [Curso Gratis de AWS 2021!!! - 05 - EC2 Parte 2, Amazon Machine Images (AMIs)](https://www.youtube.com/watch?v=snYEWXARxeE)
 - [Curso Gratis de AWS 2021!!! - 06 - EC2 Parte 3: Keypairs](https://www.youtube.com/watch?v=BborOYHhE00)
+- [Curso Gratis de AWS 2021!!! - 07 - EC2 Parte 4, Ciclo de vida y Estados de una instancia](https://youtu.be/kf-mOpG_7Ao)
+- [Curso Gratis de AWS 2021!!! - 08 - EC2 Parte 5, EIP y Instalar Webserver](https://youtu.be/dXhL_8LT2xg)
+- [Curso Gratis de AWS 2021!!! - 09 - EC2 Parte 6: Metadata](https://youtu.be/X8c_BaCbpNw)
+
+
+
+- [Curso Gratis de AWS 2021!!!  - Especial EBS Parte 1 - Introducción](https://youtu.be/4Kul06FzfKw)
+- [Curso Gratis de AWS 2021!!! -  Especial EBS Parte 2 - Operar con volúmenes](https://youtu.be/rQjgVLbKJOE)
+- [Curso Gratis de AWS 2021!!! -  Especial EBS Parte 3 - Snapshots](https://youtu.be/NmfJ4ptULj0)
+- [Curso Gratis de AWS 2021!!! -  Especial EBS Parte 4 - Compartir Snapshots](https://youtu.be/LVwHl_q6dPM)
+
+
+
+
+
 
 ## Proximamente 
+- [Curso Gratis de AWS 2021!!! - 10 - EC2 Parte 7:  Ejecutar comandos al inicio con User data](https://youtu.be/I4kEJ7sRYj0) 11 marzo
+- [Curso Gratis de AWS 2021!!! - 10 - EC2 Parte 8: Tipos Burstable](https://youtu.be/rbICsGAgv84) 16 marzo
+- [Curso Gratis de AWS 2021!!! -  Especial EBS Parte 5 - Custom AMI](https://youtu.be/71wKZk1zzNk) 23 marzo
 
-- 07 - EC2 - Ciclo vida instancias
 - 08 - EC2 - EIP e instalar webserver
 
 ## To Do o lista de videos pendientes de grabar
@@ -98,9 +115,6 @@ Este repositorio incluye codigo de apoyo para las lecciones de aws del canal de 
 - aws config
 - organizations
 - AWS SSO
-
-
-
 
 ## Herramientas desarrollo
 - Glue
